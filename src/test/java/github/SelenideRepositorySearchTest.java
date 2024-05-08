@@ -1,20 +1,19 @@
 package github;
 
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SelenideRepositorySearch {
+public class SelenideRepositorySearchTest {
   @BeforeAll
   static void configuration() {
-    String pageLoadStrategy = "eager";
+    Configuration.pageLoadStrategy = "eager";
   }
 
   @Test
@@ -36,13 +35,5 @@ public class SelenideRepositorySearch {
             "}\n" +
             "}"));
 
-sleep(5000);
-
-    // ARRANGE
-    // ACT
-    // ACT
-    // (ASSERT)
-    // ACT
-    // ASSERT
   }
 }
